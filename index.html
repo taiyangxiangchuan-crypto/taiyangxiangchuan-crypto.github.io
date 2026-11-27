@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ホームページ作成販売 | 中小企業・個人事業者向けホームページ制作と運用サポート</title>
+<meta name="description" content="ホームページ作成販売は、中小企業・個人事業者向けのホームページ制作と、公開後の運用サポート（保守）を行う事業です。初期費用98,000円＋月額19,800円（税別）。">
+<style>
+  :root{
+    --navy:#0b1f3a;
+    --navy2:#122c52;
+    --ink:#1a2433;
+    --sub:#5a6a80;
+    --line:#e2e8f2;
+    --accent:#2f7fe0;
+    --bg:#ffffff;
+    --bg2:#f4f7fb;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP","Yu Gothic",sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.8;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+
+  /* Header */
+  header{
+    background:var(--navy);
+    color:#fff;
+    padding:20px 0;
+  }
+  header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+  .logo{font-size:20px;font-weight:800;letter-spacing:.04em}
+  header a.mail{
+    color:#fff;text-decoration:none;font-size:14px;
+    border:1px solid rgba(255,255,255,.5);border-radius:999px;
+    padding:6px 16px;
+  }
+  header a.mail:hover{background:rgba(255,255,255,.12)}
+
+  /* Hero */
+  .hero{
+    background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);
+    color:#fff;
+    padding:88px 0 80px;
+  }
+  .hero .tag{
+    display:inline-block;font-size:13px;font-weight:700;letter-spacing:.12em;
+    color:#bcd7ff;border:1px solid rgba(188,215,255,.45);border-radius:999px;
+    padding:4px 14px;margin-bottom:28px;
+  }
+  .hero h1{
+    font-size:44px;line-height:1.35;font-weight:900;letter-spacing:.02em;
+    margin-bottom:24px;
+  }
+  .hero h1 .accent{color:#7db4ff}
+  .hero p.lead{font-size:17px;color:#dbe7fa;max-width:640px;margin-bottom:36px}
+  .hero .price-chip{
+    display:inline-block;background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.25);border-radius:12px;
+    padding:16px 24px;font-size:15px;
+  }
+  .hero .price-chip strong{font-size:22px;font-weight:900}
+  .hero .price-chip .tax{font-size:12px;color:#bcd7ff}
+
+  /* Sections */
+  section{padding:72px 0}
+  section.alt{background:var(--bg2)}
+  .sec-label{
+    font-size:13px;font-weight:800;letter-spacing:.16em;color:var(--accent);
+    text-transform:uppercase;margin-bottom:12px;
+  }
+  h2{font-size:30px;font-weight:900;line-height:1.4;margin-bottom:16px}
+  .sec-desc{color:var(--sub);max-width:680px;margin-bottom:40px}
+
+  .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  .card{
+    background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px;
+  }
+  .card h3{font-size:18px;font-weight:800;margin-bottom:10px}
+  .card p{font-size:15px;color:var(--sub)}
+  @media(max-width:640px){.cards{grid-template-columns:1fr}.hero h1{font-size:32px}}
+
+  /* Price */
+  .price-box{
+    background:#fff;border:2px solid var(--navy);border-radius:16px;
+    padding:36px;max-width:720px;
+  }
+  .price-row{
+    display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+    padding:14px 0;border-bottom:1px solid var(--line);
+  }
+  .price-row:last-of-type{border-bottom:none}
+  .price-row .name{font-weight:700}
+  .price-row .amount{font-size:26px;font-weight:900;white-space:nowrap}
+  .price-row .amount small{font-size:13px;font-weight:600;color:var(--sub)}
+  .price-note{font-size:14px;color:var(--sub);margin-top:20px}
+  .price-note li{margin-left:20px;margin-bottom:6px}
+
+  /* Flow */
+  .flow{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+  .step{
+    background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 16px;text-align:center;
+  }
+  .step .num{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:36px;height:36px;border-radius:50%;
+    background:var(--navy);color:#fff;font-weight:800;font-size:15px;margin-bottom:12px;
+  }
+  .step h3{font-size:15px;font-weight:800;margin-bottom:8px}
+  .step p{font-size:13px;color:var(--sub);line-height:1.6}
+  @media(max-width:820px){.flow{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:480px){.flow{grid-template-columns:1fr}}
+
+  /* Contact */
+  .contact-box{
+    background:var(--navy);color:#fff;border-radius:16px;padding:44px 36px;text-align:center;
+  }
+  .contact-box h2{color:#fff}
+  .contact-box p{color:#dbe7fa;margin-bottom:24px}
+  .contact-box a.mail-btn{
+    display:inline-block;background:#fff;color:var(--navy);
+    font-weight:800;font-size:17px;text-decoration:none;
+    border-radius:999px;padding:14px 36px;
+  }
+  .contact-box a.mail-btn:hover{background:#dbe7fa}
+  .contact-box .addr{margin-top:18px;font-size:14px;color:#bcd7ff}
+
+  footer{
+    padding:32px 0;border-top:1px solid var(--line);
+    font-size:13px;color:var(--sub);text-align:center;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="logo">ホームページ作成販売</div>
+    <a class="mail" href="mailto:muse.umi.hp.jp@gmail.com">メールで相談する</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="tag">中小企業・個人事業者向け</span>
+    <h1>ホームページの制作から、<br>公開後の運用まで<span class="accent">一貫サポート</span>。</h1>
+    <p class="lead">ホームページ作成販売は、ホームページを持っていない企業や、古いままになっている企業に向けて、制作と公開後の運用サポート（保守）をセットで提供する事業です。公開して終わりではなく、公開後の改善まで含めて支援します。</p>
+    <div class="price-chip">初期費用 <strong>98,000円</strong> <span class="tax">（税別）</span> ＋ 月額 <strong>19,800円</strong> <span class="tax">（税別）</span></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <p class="sec-label">Service</p>
+    <h2>事業内容</h2>
+    <p class="sec-desc">ホームページ制作と、公開後の運用サポートをひとつのパッケージとして提供します。会社ごとに事業内容や強みに合わせて、文言・構成・写真を個別に作ります。</p>
+    <div class="cards">
+      <div class="card">
+        <h3>ホームページ制作</h3>
+        <p>ヒアリングをもとに、会社紹介・サービス内容・施工事例・お問い合わせ導線などを盛り込んだホームページを制作します。事前にデモページを作成し、内容を確認いただいてから公開します。</p>
+      </div>
+      <div class="card">
+        <h3>運用サポート（保守）</h3>
+        <p>公開後は月額サポートとして、ページの維持管理や軽微な修正に対応します。お客様の声や施工事例の追加など、内容の充実もご相談いただけます。</p>
+      </div>
+      <div class="card">
+        <h3>初回改善（パッケージ込み）</h3>
+        <p>公開から約1か月後に、アクセス状況とお問い合わせ導線を点検し、優先度の高い改善を1件実施します。結果は簡易レポートで共有します。</p>
+      </div>
+      <div class="card">
+        <h3>対象のお客様</h3>
+        <p>ホームページをまだ持っていない中小企業・個人事業者、ホームページはあるが情報が古くなっている事業者を対象としています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <p class="sec-label">Price</p>
+    <h2>料金</h2>
+    <p class="sec-desc">料金はシンプルに、初期費用と月額サポートの2つだけです。</p>
+    <div class="price-box">
+      <div class="price-row">
+        <span class="name">初期費用（制作費）</span>
+        <span class="amount">98,000円<small>（税別）</small></span>
+      </div>
+      <div class="price-row">
+        <span class="name">月額サポート（保守）</span>
+        <span class="amount">19,800円<small>（税別）／月</small></span>
+      </div>
+      <ul class="price-note">
+        <li>パッケージには、公開後約1か月後の初回改善（アクセス状況と問い合わせ導線の点検・改善1件と簡易レポート）が含まれます。</li>
+        <li>お支払いはクレジットカード決済に対応しています。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="sec-label">Flow</p>
+    <h2>進め方</h2>
+    <p class="sec-desc">お申し込みから公開、その後のサポートまでの流れです。</p>
+    <div class="flow">
+      <div class="step">
+        <span class="num">1</span>
+        <h3>ヒアリング</h3>
+        <p>事業内容やご要望、ホームページで伝えたいことをお聞きします。</p>
+      </div>
+      <div class="step">
+        <span class="num">2</span>
+        <h3>デモページ作成</h3>
+        <p>実際のデザイン案をデモページとして作成します。</p>
+      </div>
+      <div class="step">
+        <span class="num">3</span>
+        <h3>ご確認</h3>
+        <p>デモページをご覧いただき、文言や構成を確認・調整します。</p>
+      </div>
+      <div class="step">
+        <span class="num">4</span>
+        <h3>公開</h3>
+        <p>確認が済んだ内容でホームページを公開します。</p>
+      </div>
+      <div class="step">
+        <span class="num">5</span>
+        <h3>月額サポート</h3>
+        <p>公開後は月額サポートで維持管理と初回改善を行います。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="contact-box">
+      <h2>お問い合わせ</h2>
+      <p>ホームページ制作のご相談は、メールにて受け付けています。<br>デモページの作成希望や料金についてのご質問も、お気軽にご連絡ください。</p>
+      <a class="mail-btn" href="mailto:muse.umi.hp.jp@gmail.com">メールで問い合わせる</a>
+      <p class="addr">muse.umi.hp.jp@gmail.com</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">ホームページ作成販売</div>
+</footer>
+
+</body>
+</html>
